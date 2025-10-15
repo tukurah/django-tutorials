@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+
+{% load static %}
+
+
+{% block main %}
+<h1 class="blog_h1">Signin into your account</h1>
+
+
+<form action="" class="blogform" method="post">
+
+    {% csrf_token %}
+    {{form}}
+    <button>Sign in</button>
+
+    <br><br>
+
+    <p>
+        Don't have an account? Click <a href=" {% url 'userSignup' %} ">Sign up</a> to continue.
+    </p>
+    
+</form>
+
+
+
+{% endblock main %}

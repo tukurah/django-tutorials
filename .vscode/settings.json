@@ -1,0 +1,5 @@
+{
+    "editor.formatOnPaste": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.useInlineCompletions": false
+}

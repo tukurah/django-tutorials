@@ -1,0 +1,35 @@
+
+{% extends 'layout.html' %}
+
+{% load static %}
+
+
+ {% block main %}
+
+<h1>Hello, Welcome to my contact page</h1>
+
+<form action="" class="contact_me">
+
+    {% csrf_token %}
+
+         <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="enter your name" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="enter your valid email" required>
+    <br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+    <br>
+    <button type="submit">Submit</button>
+    
+</form>
+
+    
+
+   
+
+contact me at:
+    <a href=""><mailto:>titustukurah@gmail.com</mailto:></a>
+    
+{% endblock main %}
