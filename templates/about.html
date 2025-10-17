@@ -1,25 +1,108 @@
 {% extends 'layout.html' %} 
 
-
-{% block main %}
-
-
 {% load static %}
 
-
-
-<div class="bio">
-  <div class="picture"><img src=" {% static 'images/bioprofile.jpeg' %} " alt="" /></div>
-
-  <div class="profile">
-    <h1><span>Hi👋,</span> <br> My name is Titus Tukurah <span>Yakubu</span></h1>
-    <h3>Something you should know about Titus</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-      labore beatae quo deleniti illo, porro accusamus! Nam libero blanditiis
-      deleniti vitae fugit officiis in dicta. Autem quod quis a perferendis.
-    </p>
-  </div>
+{% block main %}
+<div class="about-container">
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <h1>About me</h1>
+      <p class="subtitle">Cyber Security/Software Developer & Designer</p>
+    </div>
+  </section>
+  
+  <!-- Profile Section -->
+  <section class="profile-section">
+    <div class="profile-image">
+      <img src="{% static 'images/bioprofile.jpeg' %}" alt="Titus Tukurah" />
+    </div>
+    
+    <div class="profile-content">
+      <div class="greeting">
+        <h2><span class="wave">👋</span> Hi there!</h2>
+      </div>
+      
+      <div class="intro">
+        <h3>I'm <span class="highlight">Titus Tukurah Yakubu</span></h3>
+        <p class="tagline">Passionate about creating elegant solutions to complex problems</p>
+        
+        <p class="bio-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+          labore beatae quo deleniti illo, porro accusamus! Nam libero blanditiis
+          deleniti vitae fugit officiis in dicta. Autem quod quis a perferendis.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <h2>My Skills</h2>
+    
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <div class="skills-list">
+          <div class="skill-icon"><i class="fab fa-html5" title="HTML5"></i></div>
+          <div class="skill-icon"><i class="fab fa-css3-alt" title="CSS3"></i></div>
+          <div class="skill-icon"><i class="fab fa-js" title="JavaScript"></i></div>
+          <div class="skill-icon"><i class="fab fa-react" title="React"></i></div>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Backend</h3>
+        <div class="skills-list">
+          <div class="skill-icon"><i class="fab fa-python" title="Python"></i></div>
+          <div class="skill-icon"><i class="fab fa-python" title="Django"></i><span class="django-text">Dj</span></div>
+          <div class="skill-icon"><i class="fab fa-node-js" title="Node.js"></i></div>
+          <div class="skill-icon"><i class="fas fa-database" title="SQL"></i></div>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Tools & Others</h3>
+        <div class="skills-list">
+          <div class="skill-icon"><i class="fab fa-git-alt" title="Git"></i></div>
+          <div class="skill-icon"><i class="fab fa-figma" title="Figma"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Experience Section -->
+  <section class="experience-section">
+    <h2>Experience</h2>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Software Developer</h3>
+          <p class="timeline-place">Company Name</p>
+          <p class="timeline-date">2020 - Present</p>
+          <p>Brief description of your role and achievements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Education Section -->
+  <section class="education-section">
+    <h2>Education</h2>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Computer Science Degree</h3>
+          <p class="timeline-place">University Name</p>
+          <p class="timeline-date">2016 - 2020</p>
+          <p>Brief description of your education and achievements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
-
 {% endblock main %}
