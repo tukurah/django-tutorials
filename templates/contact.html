@@ -13,8 +13,17 @@
     
     <div class="contact-content">
         <div class="contact-form-container">
-            <form action="" class="contact-form">
+            <form action="{% url 'contact' %}" method="post" class="contact-form">
                 {% csrf_token %}
+                {% if messages %}
+                <div class="form-messages">
+                    {% for message in messages %}
+                    <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
                 
                 <div class="form-group">
                     <label for="name">Name</label>

@@ -1035,266 +1035,85 @@ p {
     color: white;
 }
 
-/* Auth Pages (Signin/Signup) */
-.auth-page {
-    min-height: calc(100vh - 200px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
+/* Add Blog Form */
+/* Add Blog Form */
+/* Add Blog Form */
+
+.blogform{
+    border: 2px solid black;
+    width: 50%;
+    margin: auto;
+    padding: 50px;
+    background-color: blanchedalmond;
+    margin-top: 50px;
+    
 }
 
-.auth-container {
-    max-width: 500px;
-    width: 100%;
-    background-color: white;
-    border-radius: var(--border-radius);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.auth-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 30px;
-    text-align: center;
-}
-
-.auth-header h1 {
-    margin: 0 0 10px;
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-}
-
-.auth-header p {
-    margin: 0;
-    opacity: 0.9;
-    font-family: 'Poppins', sans-serif;
-}
-
-.auth-form-container {
-    padding: 30px;
-}
-
-.auth-form .form-group {
+.blogform > div{
+    display: grid;
     margin-bottom: 20px;
 }
 
-.auth-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #333;
+.blogform label{
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.auth-form input {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    font-size: 16px;
-    transition: var(--transition);
+.blogform input{
+    border-radius: 4px;
+    border: transparent;
+    padding: 20px;
+
+}
+.blogform textarea{
+    border-radius: 4px;
+    border: transparent;
+    padding: 20px;
+    height: 100px;
+    resize: none;
+}
+.blogform input{
+    border-radius: 4px;
+    border: transparent;
+    padding: 20px;
+
 }
 
-.auth-form input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.2);
-    outline: none;
-}
-
-.auth-errors {
-    background-color: #fff5f5;
-    border-left: 4px solid #e53e3e;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-}
-
-.error-message {
-    color: #e53e3e;
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-.form-actions {
-    margin-top: 25px;
-}
-
-.auth-button {
-    width: 100%;
-    background-color: var(--primary-color);
+.blogform button{
+    background-color: rgb(177, 28, 28);
     color: white;
     border: none;
-    padding: 14px 20px;
-    border-radius: var(--border-radius);
-    font-weight: 600;
+    padding: 15px 15px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: var(--transition);
-    font-size: 16px;
-    text-transform: uppercase;
+    width: 100%;
+    font-family: Tahoma;
 }
 
-.auth-button:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.blogform button:hover{
+    background-color: rgba(100, 20, 20, 0);
+    border: 2px solid rgb(18, 9, 9);
+    color: black;
 }
 
-.auth-links {
+.blog_h1{
     text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-}
-
-.auth-links a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.auth-links a:hover {
-    color: var(--primary-dark);
-    text-decoration: underline;
-}
-
-/* Blog Grid Layout */
-.blog-page {
-    padding: 40px 20px;
-}
-
-.blog-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.blog-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.blog-header p {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.blog-card {
-    background-color: white;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-    height: 100%;
-}
-
-.blog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.blog-card-inner {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 20px;
-}
-
-.blog-card-header {
-    margin-bottom: 15px;
-}
-
-.blog-title {
-    font-size: 1.3rem;
-    margin: 0 0 10px;
-    color: #333;
-    font-family: 'Playfair Display', serif;
-    line-height: 1.3;
-}
-
-.blog-meta {
-    font-size: 0.85rem;
-    color: #666;
-    margin: 0;
-}
-
-.blog-card-body {
-    flex-grow: 1;
-}
-
-.blog-description {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.5;
     margin-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
 }
 
-.blog-card-footer {
-    margin-top: auto;
-}
-
-.read-more-btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 8px 15px;
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.read-more-btn:hover {
-    background-color: var(--primary-dark);
-}
-
-.no-blogs {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: 40px;
-    background-color: white;
-    border-radius: var(--border-radius);
-}
-
-/* Responsive Blog Grid */
-@media (max-width: 1200px) {
-    .blog-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .blog-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .blog-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Hide help text */
-#id_username_helptext,
-#id_password_helptext, 
-#id_password1_helptext, 
-#id_password2_helptext {
+/* Sign up form */
+#id_username_helptext{
     display: none;
+    
+}
+
+
+#id_password_helptext, #id_password1_helptext, #id_password2_helptext{
+    display: none;
+    
 }
 
 /* Contact me form */

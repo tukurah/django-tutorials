@@ -20,15 +20,15 @@
           <div class="header-inner">
             <div class="logo">
               <a href="{% url 'homepage' %}">
-                <span class="logo-text">TT</span>
+                <span class="logo-text">titustukurah</span>
               </a>
             </div>
 
-            <button class="mobile-menu-toggle">
+            <div class="mobile-menu-toggle">
               <span></span>
               <span></span>
               <span></span>
-            </button>
+            </div>
 
             <nav class="main-navigation">
               <ul class="nav-menu">
@@ -45,7 +45,7 @@
                 <li class="auth-item">
                   <form action="{% url 'userLogout' %}" method="POST">
                     {% csrf_token %}
-                    <button class="logout-btn">Logout</button>
+                    <button type="submit" class="logout-btn">Logout</button>
                   </form>
                 </li>
                 {% else %}
@@ -90,30 +90,17 @@
       </footer>
     </div>
 
+    {% block scripts %}
+    {% endblock scripts %}
+    
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const mainNav = document.querySelector('.main-navigation');
-        
-        if (menuToggle) {
-          menuToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
-            mainNav.classList.toggle('active');
-          });
-        }
-        
-        // Add active class to current page link
-        const currentLocation = window.location.pathname;
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        navLinks.forEach(link => {
-          const linkPath = link.getAttribute('href');
-          if (currentLocation === linkPath || currentLocation.startsWith(linkPath) && linkPath !== '/') {
-            link.classList.add('active');
-          }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+                document.querySelector('.main-navigation').classList.toggle('active');
+                this.classList.toggle('active');
+            });
         });
-      });
     </script>
   </body>
 </html>
